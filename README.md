@@ -1,3 +1,10 @@
+# Short build example for clang-format:
+
+$ git clone https://github.com/llvm/llvm-project.git
+$ cmake -S llvm -B build -G Ninja -DLLVM_BUILD_TESTS=ON -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra"
+$ ninja -C build/ clang-format FormatTests
+
+
 # The LLVM Compiler Infrastructure
 
 This directory and its sub-directories contain source code for LLVM,
